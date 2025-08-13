@@ -52,22 +52,22 @@ def construct_society(question: str) -> RolePlaying:
     models = {
         "user": ModelFactory.create(
             model_platform=ModelPlatformType.OPENAI,
-            model_type=ModelType.GPT_4O,
+            model_type=ModelType.GPT_4_1_MINI,
             model_config_dict={"temperature": 0},
         ),
         "assistant": ModelFactory.create(
             model_platform=ModelPlatformType.OPENAI,
-            model_type=ModelType.GPT_4O,
+            model_type=ModelType.GPT_4_1_MINI,
             model_config_dict={"temperature": 0},
         ),
         "browsing": ModelFactory.create(
             model_platform=ModelPlatformType.OPENAI,
-            model_type=ModelType.GPT_4O,
+            model_type=ModelType.GPT_4_1_MINI,
             model_config_dict={"temperature": 0},
         ),
         "planning": ModelFactory.create(
             model_platform=ModelPlatformType.OPENAI,
-            model_type=ModelType.GPT_4O,
+            model_type=ModelType.GPT_4_1_MINI,
             model_config_dict={"temperature": 0},
         ),
     }

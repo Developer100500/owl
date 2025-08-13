@@ -25,7 +25,7 @@ from camel.toolkits import (
     ExcelToolkit,
     FileWriteToolkit,
 )
-from camel.types import ModelPlatformType
+from camel.types import ModelPlatformType, ModelType
 
 from owl.utils import OwlRolePlaying
 from typing import Dict, List, Optional, Tuple
@@ -197,8 +197,8 @@ def construct_society(question: str) -> ExcelRolePalying:
 
     # Create models for different components using Azure OpenAI
     base_model_config = {
-        "model_platform": ModelPlatformType.AZURE,
-        "model_type": os.getenv("AZURE_OPENAI_MODEL_TYPE"),
+        "model_platform": ModelPlatformType.OPENAI,
+        "model_type": ModelType.GPT_4_1,
         "model_config_dict": ChatGPTConfig(temperature=0.01, max_tokens=4096).as_dict(),
     }
 

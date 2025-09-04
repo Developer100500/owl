@@ -17,8 +17,19 @@ class JokeResponse(BaseModel):
     joke: str = Field(description="A joke")
     funny_level: int = Field(description="Funny level, from 1 to 10")
 
+
 # Create agent with structured output
-agent = ChatAgent(model="gpt-4o-mini")
+model = ModelFactory.create(
+    url="https://api.vsegpt.ru/v1",
+    model_platform=ModelPlatformType.OPENAI,
+    model_type=str(ModelPlatformType.OPENAI.value) + "/" + str(ModelType.GPT_5_MINI.value),
+    model_config_dict={"temperature": 0.8, "max_tokens": 5000},
+)
+
+agent = ChatAgent(
+    model=model
+)
+
 response = agent.step("Tell me a joke.", response_format=JokeResponse)
 
 # The response content is a JSON string

@@ -1,0 +1,8 @@
+from _typeshed import Incomplete
+
+CREATE_NODE_PROMPT: Incomplete
+ASSIGN_TASK_PROMPT: Incomplete
+PROCESS_TASK_PROMPT: Incomplete
+ROLEPLAY_PROCESS_TASK_PROMPT: Incomplete
+ROLEPLAY_SUMMARIZE_PROMPT: Incomplete
+WF_TASK_DECOMPOSE_PROMPT: str

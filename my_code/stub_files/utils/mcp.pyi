@@ -1,0 +1,9 @@
+from _typeshed import Incomplete
+from typing import Any, Callable
+
+class MCPServer:
+    function_names: Incomplete
+    server_name: Incomplete
+    def __init__(self, function_names: list[str] | None = None, server_name: str | None = None) -> None: ...
+    def make_wrapper(self, func: Callable[..., Any]) -> Callable[..., Any]: ...
+    def __call__(self, cls): ...

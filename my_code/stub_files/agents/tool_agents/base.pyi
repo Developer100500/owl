@@ -1,0 +1,9 @@
+from _typeshed import Incomplete
+from camel.agents import BaseAgent
+
+class BaseToolAgent(BaseAgent):
+    name: Incomplete
+    description: Incomplete
+    def __init__(self, name: str, description: str) -> None: ...
+    def reset(self) -> None: ...
+    def step(self) -> None: ...

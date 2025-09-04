@@ -1,0 +1,3 @@
+from camel.toolkits import FunctionTool
+
+def sync_funcs_to_async(funcs: list[FunctionTool]) -> list[FunctionTool]: ...

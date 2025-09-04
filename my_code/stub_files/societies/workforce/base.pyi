@@ -1,0 +1,16 @@
+from _typeshed import Incomplete
+from abc import ABC, abstractmethod
+from camel.societies.workforce.task_channel import TaskChannel
+from typing import Any
+
+class BaseNode(ABC):
+    node_id: Incomplete
+    description: Incomplete
+    def __init__(self, description: str) -> None: ...
+    def reset(self, *args: Any, **kwargs: Any) -> Any: ...
+    @abstractmethod
+    def set_channel(self, channel: TaskChannel): ...
+    @abstractmethod
+    async def start(self): ...
+    @abstractmethod
+    def stop(self): ...

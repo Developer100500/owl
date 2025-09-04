@@ -1,0 +1,16 @@
+from _typeshed import Incomplete
+from camel.messages import BaseMessage
+from camel.responses import ChatAgentResponse
+from typing import Any, Sequence
+
+class Human:
+    name: Incomplete
+    logger_color: Incomplete
+    input_button: Incomplete
+    kill_button: str
+    options_dict: dict[str, str]
+    def __init__(self, name: str = 'Kill Switch Engineer', logger_color: Any = ...) -> None: ...
+    def display_options(self, messages: Sequence[BaseMessage]) -> None: ...
+    def get_input(self) -> str: ...
+    def parse_input(self, human_input: str) -> str: ...
+    def reduce_step(self, messages: Sequence[BaseMessage]) -> ChatAgentResponse: ...
